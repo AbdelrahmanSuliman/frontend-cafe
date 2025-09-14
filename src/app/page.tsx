@@ -39,10 +39,10 @@ export default async function Home() {
       <section className="flex-col flex justify-center items-center bg-base-300">
         <div className="px-6 py-12 flex flex-col gap-2 items-center">
           <h1 className="text-4xl font-semibold text-center">
-            Explore Our Customers' Favorite Coffees
+            Explore Our Customers&apos; Favorite Coffees
           </h1>
           <p className="text-2xl text-gray-700 p-6 text-center">
-            We've curated a collection of our most popular blends to make
+            We&apos;ve curated a collection of our most popular blends to make
             finding your next favorite coffee easy
           </p>
         </div>
@@ -63,7 +63,7 @@ export default async function Home() {
             <h2 className="text-5xl font-bold mb-4 text-primary">Our Story</h2>
             <div className="w-20 h-1 bg-primary mb-6"></div>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              {ourStory?.text}
+              {ourStory?.text.replace(/'/g, "&apos;").replace(/"/g, "&quot;")}
             </p>
             <button className="btn btn-primary text-lg px-8">Visit Us</button>
           </div>
@@ -98,7 +98,7 @@ export default async function Home() {
             <h6 className="footer-title">Legal</h6>
             <a className="link link-hover">Terms of use</a>
             <a className="link link-hover">Privacy policy</a>©{" "}
-            {new Date().getFullYear()} Pour Café. All rights reserved.
+            {new Date().getFullYear()} Pour Caf&eacute;. All rights reserved.
           </nav>
           <form>
             <h6 className="footer-title">Newsletter</h6>
